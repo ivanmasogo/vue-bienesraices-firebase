@@ -21,7 +21,7 @@
 
 <template>
   <v-card flat>
-    <v-card-title class="mt-5 text-h3 text-center py-5 font-weight-bold">
+    <v-card-title class="mt-5 text-lg-h3 text-center py-5 font-weight-bold text-wrap">
       {{ propiedad?.titulo }}
     </v-card-title>
     <v-img :src="propiedad?.imagen" height="550" cover/> 
@@ -68,7 +68,7 @@
             :lat-lng="center"
           >
             <LPopup>
-              {{ propiedad.titulo}}
+              {{ propiedad?.titulo}}
             </LPopup>
           </LMarker>
           <LTileLayer
@@ -85,4 +85,5 @@
   .text-pre-wrap{
     white-space:pre-wrap;
   }
+
 </style>

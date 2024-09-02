@@ -16,7 +16,7 @@
   >
     <v-card>
       <v-img :src="propiedad.imagen" height="250" cover />
-      <v-card-title >
+      <v-card-title class="text-body-2 font-weight-bold" >
         {{ propiedad.titulo }}
       </v-card-title>
       <v-card-text
@@ -33,7 +33,7 @@
       <template v-slot:actions>
         <v-btn
           block
-          color="info"
+          color="teal-lighten-4"
           variant="flat"
           :to="{name : 'propiedad', params : { id : propiedad.id } }"
         >

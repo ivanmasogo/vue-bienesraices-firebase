@@ -1,0 +1,62 @@
+<script setup>
+  defineProps({
+    propiedad: {
+      type: Object
+    },
+    price: {
+      type: Function
+    },
+    deleteItem:{
+      type: Function
+    }
+  })
+</script>
+
+<template>
+  <v-col
+    cols="12"
+    md="4"
+  >
+    <v-card>
+      <v-img :src="propiedad.imagen" height="250" cover />
+      <v-card-title class="text-body-2 font-weight-bold" >
+        {{ propiedad.titulo }}
+      </v-card-title>
+      <v-card-text
+        class="text-truncate"
+      >
+        {{ propiedad.descripcion}}
+      </v-card-text>
+      <v-card-text
+        class="text-h5 font-weight-bold"
+      >
+        Precio: {{ price(propiedad.precio)}}
+      </v-card-text>
+
+      <v-card-actions>
+        <v-row>
+          <v-col cols="6">
+            <v-btn
+              class="w-100"
+              color="teal"
+              variant="flat"
+              :to="{name: 'editar-propiedad', params:{id : propiedad.id}}"
+            >
+              Editar
+            </v-btn>
+          </v-col>
+          <v-col cols="6">
+            <v-btn
+            class="w-100"
+              color="red-darken-3"
+              variant="flat"
+              @click="deleteItem(propiedad.id, propiedad.imagen)"
+            >
+              Eliminar
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-card-actions>
+    </v-card>
+  </v-col>
+</template>
