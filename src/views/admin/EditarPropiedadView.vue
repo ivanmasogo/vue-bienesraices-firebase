@@ -75,7 +75,7 @@
       <h1 class="text-h4 font-weight-bold">Editar Propiedad</h1>
     </v-card-title>
     <v-card-subtitle>
-      <p class="text-h5">Edita los detalles de la propiedad</p>
+      <p class="text-subtitle-1 text-lg-h5">Edita los detalles de la propiedad</p>
     </v-card-subtitle>
 
     <v-form class="mt-10">
